@@ -70,7 +70,7 @@
 }
 
 .dark-mode {
-  color: #fff;
+  color: grey;
   background-color: #313843;
 
   .navbar {
