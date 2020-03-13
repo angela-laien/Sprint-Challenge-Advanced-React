@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import PlayerCard from './PlayerCard';
+import { Container, Row } from "reactstrap";
+
 
 export default class Playerslist extends React.Component {
     constructor() {
@@ -25,18 +27,20 @@ export default class Playerslist extends React.Component {
 
     render() {
         return(
-            <div>
-                {this.state.players.map(player =>
-                    {console.log(player)
-                        return(
-                    <PlayerCard 
-                        name={player.name}
-                        country={player.country}
-                        searches={player.searches}
-                    />
+            <Container>
+                <Row>
+                    {this.state.players.map(player =>
+                        {console.log(player)
+                            return(
+                        <PlayerCard 
+                            name={player.name}
+                            country={player.country}
+                            searches={player.searches}
+                        />
+                        )}
                     )}
-                )}
-            </div>
+                </Row>
+            </Container>
         )
     }
 }

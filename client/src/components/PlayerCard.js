@@ -1,11 +1,16 @@
 import React from "react";
+import { Col, Card, CardBody } from "reactstrap";
 
 export default function PlayerCard(props) {
     return(
-        <div>
-            <h2>Name: {props.name}</h2>
-            <h4>Country: {props.country}</h4>
-            <h5>Searches: {props.searches}</h5>
-        </div>
+        <Col xs="6" md="4" xl="3">
+            <Card>
+                <CardBody>
+                    <h5>Name: {props.name}</h5>
+                    <h6>Country: {props.country}</h6>
+                    <h6>Searches: {props.searches}</h6>
+                </CardBody>
+            </Card>
+        </Col> 
     );
 }
