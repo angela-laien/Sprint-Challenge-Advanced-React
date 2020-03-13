@@ -1,0 +1,13 @@
+1. Why would you use class component over function components (removing hooks from the question)?
+    Class components enable me to use react lifecycle method in some old code at work.
+
+2. Name three lifecycle methods and their purposes.
+    Constructor() is used to initialize local state and bind event handlers.
+    ComponentDidMount() is used to load data from API.
+    Render() is required for using react component subclass. It returns what I need when called.
+
+3. What is the purpose of a custom hook?
+    Custom hook is for coding reusable functions, event handlers, and methods.
+
+4. Why is it important to test our apps?
+    Testing ensures the app work properly for the users.
