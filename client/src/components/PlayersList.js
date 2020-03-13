@@ -10,11 +10,11 @@ export default class Playerslist extends React.Component {
         }
     }
 
-    componentsDidMount() {
+    componentDidMount() {
         axios
             .get('http://localhost:5000/api/players')
             .then(res => {
-                console.log(res);
+                console.log(res.data);
                 this.setState({
                     players: res.data
                 })
@@ -26,12 +26,15 @@ export default class Playerslist extends React.Component {
     render() {
         return(
             <div>
-                {this.state.players.map(players =>
+                {this.state.players.map(player =>
+                    {console.log(player)
+                        return(
                     <PlayerCard 
-                        name={players.name}
-                        country={players.country}
-                        searches={players.searches}
+                        name={player.name}
+                        country={player.country}
+                        searches={player.searches}
                     />
+                    )}
                 )}
             </div>
         )
